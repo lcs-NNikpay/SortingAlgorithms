@@ -68,21 +68,21 @@ numbers
 //: ### Iterate over only the values of an array
 // Print all the values, from first to last
 for number in numbers {
-    print(number)
+//    print(number)
 }
 print("==================")
 
 //: ### Iterate over the indexes and values, moving from start to end
 // Print the index and value, from first to last
 for i in 0..<numbers.count {
-    print("Index is \(i) and the value is \(numbers[i])")
+//    print("Index is \(i) and the value is \(numbers[i])")
 }
 print("==================")
 
 //: ### Iterate over the indexes and values, moving from end to start
 // Print the index and value, from last to first
 for i in stride(from: numbers.count - 1, through: 0, by: -1) {
-    print("Index is \(i) and the value is \(numbers[i])")
+//    print("Index is \(i) and the value is \(numbers[i])")
 }
 
 //: ### Iterate until a list is empty
@@ -110,6 +110,29 @@ numbers
  Commit often. Have fun!
  
  */
+// Add values to the array
+numbers.append(5)
+numbers.append(6)
+numbers.append(7)
+numbers.append(8)
+numbers.append(9)
+// Know we are swapping numbers
+//let temporaryNumber = numbers[0]
+//numbers[0] = numbers[1]
+//numbers[1] = temporaryNumber
+//
+// We created a loop , which keeps removing highest values from the array , untill its empty.
+while numbers.count > 0 {
 
-// Begin your implementation below...
+    // Assume first number in the list is highest
+    var highestIndex = 0
+    var highestValue = numbers[0]
+
+    // Loop to find the current highest in the list
+    for i in 1..<numbers.count {
+         print("Index is \(i) and the value is \(numbers[i])")
+    }
+    
+    numbers.remove(at: numbers.count - 1) // remove number at the end of array
+}
 
